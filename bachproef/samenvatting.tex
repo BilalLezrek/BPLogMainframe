@@ -1,0 +1,33 @@
+%%=============================================================================
+%% Samenvatting
+%%=============================================================================
+
+% TODO: De "abstract" of samenvatting is een kernachtige (~ 1 blz. voor een
+% thesis) synthese van het document.
+%
+% Een goede abstract biedt een kernachtig antwoord op volgende vragen:
+%
+% 1. Waarover gaat de bachelorproef?
+% 2. Waarom heb je er over geschreven?
+% 3. Hoe heb je het onderzoek uitgevoerd?
+% 4. Wat waren de resultaten? Wat blijkt uit je onderzoek?
+% 5. Wat betekenen je resultaten? Wat is de relevantie voor het werkveld?
+%
+% Daarom bestaat een abstract uit volgende componenten:
+%
+% - inleiding + kaderen thema
+% - probleemstelling
+% - (centrale) onderzoeksvraag
+% - onderzoeksdoelstelling
+% - methodologie
+% - resultaten (beperk tot de belangrijkste, relevant voor de onderzoeksvraag)
+% - conclusies, aanbevelingen, beperkingen
+%
+% LET OP! Een samenvatting is GEEN voorwoord!
+
+%%---------- Samenvatting -----------------------------------------------------
+% De samenvatting in de hoofdtaal van het document
+
+\chapter*{\IfLanguageName{dutch}{Samenvatting}{Abstract}}
+
+Deze bachelorproef gaat over het analyseren van mainframe systeemlogs, zodat MFPOSS, een systeembeheerteam voor Colruyt Group, sneller fouten kan opsporen of preventief kan handelen. In hun huidige situatie moeten ze miljoenen rijen logrecords doorzoeken wanneer zich een probleem voordoet. Colruyt Group heeft buiten het mainframe een mogelijke oplossing genaamd de Elastic-stack. De Elastic-stack is een set softwaretools die logs helpen indexeren, analyseren en visualiseren. De benodigde programma's hiervoor zijn Elasticsearch, Logstash en Kibana. Colruyt heeft een team dat de Elastic-stack beheert. De vraag is nu: hoe waardevol zou de Elastic-stack zijn voor mainframe systeemlogs? Zou het mainframeteam te veel mankracht moeten inzetten om waardevolle informatie te verkrijgen en loganalyse uit te voeren? Dit is het onderwerp van ons onderzoek. Na enkele kleine problemen hebben we toch enkele logs in de stack gekregen. Kibana is het visualisatieprogramma waarmee gebruikers voornamelijk zullen werken. Tijdens dit onderzoek is geen volledig dashboard gemaakt omdat de benodigde rechten helaas niet op tijd werden geleverd. De panelen die op het dashboard zouden zijn geplaatst, zijn echter wel nagebootst. Na een vergelijking met vooraf opgestelde MoSCoW-vereisten is de conclusie dat de Elastic-stack, ondanks enkele problemen, voldoende meerwaarde biedt voor MFPOSS. Dit geldt ook voor toekomstige mainframeteams die vergelijkbare verwachtingen hebben.

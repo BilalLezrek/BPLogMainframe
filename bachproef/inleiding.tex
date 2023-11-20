@@ -1,0 +1,46 @@
+%%=============================================================================
+%% Inleiding
+%%=============================================================================
+
+\chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}%
+\label{ch:inleiding}
+
+In hun kern zijn mainframes eigenlijk computers met een grote hoeveelheid geheugen en data processoren. Daarmee kan het een kolossaal hoeveelheid aan bewerkingen uitvoeren en gegevens verwerken. Dit doet de mainframe op een zeer betrouwbare, veilige en schaalbare manier. Voor de mainframe zijn deze 3 concepten erg van belang en blinkt het er ook meteen in uit. Een bedrijf zou van hun mainframe minstens 99.999 of '\textit{5 nines}' beschikbaarheid mogen verwachten dat betekent dat per jaar een mainframe niet meer als 5.26 minuten onverwacht onbeschikbaar is. Het is zelfs niet ongehoord dat een mainframe jaren aan een stuk draait zonder één moment waa het onverwachts onbeschikbaar is. Dit is tot op het punt gekomen waar dat voor IBM's zSystems de z voor "zero downtime" staat. Het is dus niet moeilijk om te concluderen dat betrouwbaarheid zeer hoog staat voor mainframes. Er zijn natuurlijk nog meer redenen waarom de mainframe een belangrijk platform is. Maar het is vooral door het uitblinken in deze 3 concepten dat het een cruciaal deel van onze samenleving is geworden. Banken, Overheden, Vliegtuigmaatschapijen en nog veel meer steunen op deze concepten om alles vlot en veilig te laten verlopen en dit met zo min mogelijk momenten van onbeschikbaarheden te hebben. Het is dus belangrijk om deze concepten te her-evalueren en verbeteren waar mogelijk zodat het platform alsmaar blijft evolueren met de tijden. Colruyt Group ziet op dit moment wel een plaats waar er mogelijks verbetering in kan. Om ervoor te zorgen dat hun systeem blijft draaien op een optimale wijzen hebben ze systeem logs. Het probleem daarbij is dat die logs miljoenen rijen lang kunnen zijn en voor een mens is het quasi onmogelijk om met zekerheid te bevestigen of dat er geen afwijking is gebeurd van het normaal verloop.  
+
+
+
+\section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}%
+\label{sec:probleemstelling}
+
+Een mainframe is zoals eerder kort besproken een zeer betrouwbaar machine. Dit betekent echter niet dat men moet blijven stilstaan bij wat we al hebben. Mainframes zijn al zo lang een cruciaal deel van onze samenleving niet alleen door het voldoen aan de standaarden die er al waren maar door diezelfde standaarden ook te verhogen. Dit door de machines mee te doen evolueren met huidige normen en tools. Een voorbeeld hiervan en het doel van dit onderzoek is wat Colruyt Group's MFPOSS team wilt bereiken. MFPOSS is een systeem beheerders team op de mainframe. Ze zitten op dit moment met het feit dat het voor een mens te moelijk is om te zien ofdat er abnormaliteiten voorbij flitsen op hun scherm wanneer ze bijvoorbeeld een component aan het herstarten zijn. Een oplossing voor dit probleem zou een monitoringstool zijn. Dit is waar ELK van belang wordt. ELK zou mogelijks een groot aanwinst zijn voor MFPOSS en andere mainframe teams dat iets gelijksaardig willen bereiken in de toekmost. Binnen Colruyt Group bestaat er al een ELK stack dat gebruikt wordt als een logging, monitoring en visualisatie tool door verschillende IT teams. Maar dit zijn voornamelijk IT teams buiten de mainframe. Men weet nog niet exact hoe moeilijk of nuttig het is om voor de mainframe teams de logs naar ELK te sturen en te verwerken op een manier dat de mainframe medewerkers er belang bij hebben. Voor MFPOSS is het ook an belang dat dit niet te complex is om uit te voeren en dat er niet veel mankracht aan besteed moet worden. Dit onderzoek gaat een poging doen om op deze vraag een antwoord te vinden.
+
+\section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}%
+\label{sec:onderzoeksvraag}
+
+Met dit onderzoek zal er gezocht worden naar een antwoord op de volgende 2 vragen:
+
+\begin{itemize}
+    \item Kan een lid van het MFPOSS aan de hand van ELK makkelijker zien of er een abnormaliteit is in de systeem logs?
+    \item Kan dit gebeuren op een manier waar MFPOSS niet te veel mankracht moet steken in het uitbreiden/behouden van het dashboard?
+    \item Voldoet ELK aan de verwachtingen van MFPOSS?
+\end{itemize}
+
+\section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
+\label{sec:onderzoeksdoelstelling}
+
+Het doel is om met een proof-of-concept aan te kunnen tonen dat de eerste twee onderzoeksvragen positief kunnen beantwoord worden. Er wordt ook een MoSCow opgesteld en aan de hand daarvan kan er gepolst worden ofdat het aan de verwachtingen van MFPOSS voldoet.
+
+\section{\IfLanguageName{dutch}{Opzet van deze bachelorproef}{Structure of this bachelor thesis}}%
+\label{sec:opzet-bachelorproef}
+
+De rest van deze bachelorproef is als volgt opgebouwd:
+
+In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
+
+In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
+
+In Hoofdstuk~\ref{ch:Opstellen ELK} wordt er een voorbereiding gedaan om een ELK stack aan te vragen, er wordt hier ook een mockup gemaakt. Kort bespreken we hoe we mogelijks data zouden kunnen verzenden naar de stack.
+
+In Hoofdstuk~\ref{ch:Opstellen Dashboard} wordt er Gewerkt met Kibana om resultaten te krijgen.
+
+In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.

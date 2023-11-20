@@ -1,0 +1,46 @@
+%==============================================================================
+% Sjabloon onderzoeksvoorstel bachproef
+%==============================================================================
+% Gebaseerd op document class `hogent-article'
+% zie <https://github.com/HoGentTIN/latex-hogent-article>
+
+% Voor een voorstel in het Engels: voeg de documentclass-optie [english] toe.
+% Let op: kan enkel na toestemming van de bachelorproefcoördinator!
+\documentclass{hogent-article}
+
+% Invoegen bibliografiebestand
+\addbibresource{voorstel.bib}
+
+% Informatie over de opleiding, het vak en soort opdracht
+\studyprogramme{Professionele bachelor toegepaste informatica}
+\course{Bachelorproef}
+\assignmenttype{Onderzoeksvoorstel}
+
+\academicyear{2023-2024}
+
+\title{Het analyseren van mainframe syslogs op ELK}
+
+\author{Bilal Lezrek}
+\email{Bilal.Lezrek@student.hogent.be}
+
+\supervisor[Co-promotor]{Dieter Lefere (Colruyt Group It, \href{mailto:Dieter.Lefere@colruytgroup.com}{Dieter.Lefere@colruytgroup.com})}
+
+\specialisation{Mainframe Expert}
+\keywords{Log Analysis, ELK , Mainframe, z/16}
+
+\begin{document}
+
+\begin{abstract}
+Voor de normale werking van een mainframe zijn er duizenden en soms wel miljoenen rijen aan logs per dag. Dit is voor een normale medewerker onmogelijk om door te gaan en fouten op te sporen of voorkomen. Dit is de frustratie dat zich vandaag de dag voordoet bij bedrijven die de mainframe gebruiken zoals Colruyt Group IT. Voor traditionele platformen bestaat hier al een oplossing voor genaamd log analyzers In recentere tijden zijn log analyzers zoals ELK of Datadog steeds populairder aan het worden om logs op een snelle en efficiënte manier op te zetten. Met dit onderzoek gaat er achterhaald worden of dat diezelfde analyzers ook gediend kunnen worden voor mainframes. Dit gaat volbracht worden door een keuze te maken uit verschillende moderne analyzers en daar verschillende instanties van op te zetten op een mainframe die beschikbaar wordt gemaakt door Colruyt. Dit gebeurt mogelijks op een Linux server dat het mainframe kan runnen. Als er instanties van de gekozen analyzers opgesteld zijn gaat er een vergelijking gebeuren aan de hand van criteria dat met Colruyt Group IT werd besproken. Vanuit die vergelijking kan er een keuze bepaald worden aan Colruyt Group IT. Op basis van de criteria kan die keuze verschillen voor andere bedrijven.\end{abstract}
+
+\tableofcontents
+
+\input{voorstel-inhoud}
+
+\clearpage
+
+\input{voorstel.bib}
+
+\printbibliography[heading=bibintoc]
+
+\end{document}

@@ -1,0 +1,30 @@
+%%=============================================================================
+%% Conclusie
+%%=============================================================================
+
+\chapter{Conclusie}%
+\label{ch:conclusie}
+
+\section{Conclusie}
+\begin{itemize}
+    \item Kan een lid van het MFPOSS aan de hand van ELK makkelijker zien of er een abnormaliteit is in de systeem logs?
+    \item Kan dit gebeuren op een manier waar MFPOSS niet te veel mankracht moet steken in het uitbreiden/behouden van het dashboard?
+    \item Voldoet ELK aan de verwachtingen van MFPOSS?
+\end{itemize}
+
+Dit waren de onderzoeksvragen waarmee deze bachelorproef gestart is. Op de eerste twee vragen kan er positief geantwoorden. Desondanks dat er geen dashboard gemaakt is geweest en er eich een aantal problemen voordeden, blijkt het uit testen dat op Kibana uitgevoerd zijn geweest, dat het niet alleen simpel is om ermee te werken maar dat het ook een meerwaarde heeft. Dit betekent niet dat het waard is voor MFPOSS om te blijfven werken met ELK. Daarvoor moet er gekeken worden naar de vooropgezette MoSCow.
+
+\subsection{Must have}
+De 'Must Have' dat MFPOSS had opgesteld was dat er te zien valt of er berichten in voorkomen dat opmerkkelijk veel of weinig in de logs voorkomen. Dit is mogelijk met Kibana al is er geen deviatie detectie. Dat maakt het wel aanzienlijk moeilijker maar het is een verbetering dan tegenover manueel de logs te analyseren.ELK voldoet aan de 'Must haves' maar dit zou beter kunnen. Nu kan de vraag gesteld worden wat als Colruyt Group wel aan deviatie detectie zou doen, Wat voor impact zou dat dan hebben op de mogelijkheden om logs te analyseren? Dit is voor toekomstig onderzoek vatbaar.
+
+\subsection{Should have}
+De 'should haves' dat waren opgesteld waren dat het dashboard eenvoudig aanpasbaar moest zijn. Elke visualisatie optie dat is uitgestest geweest was makkelijk te maken. Een stap we niet hebben kunnen testen was het opslaan van een visualisatie naar een dashboard. Maar dit gaat niet veel extra werk meer opleveren aan MFPOSS. Deze voorwaarde is dus voldaan. Daarentegen weet men al dat deviatie detectie niet kan wat betkent dat deze vorwaarde onvoldaan is.  
+
+\subsection{Could have}
+Door het feit dat deviatie detectie niet wordt gedaan is het automatish doorsturen van een melding quasie onmogelijk om te doen. Zeker zonder daar te veel mankracht op te zetten. ELK voldoet dus niet and de 'Could haves'. Dit is aanzich geen probleem maar het blijft wel een minpunt. 
+
+\subsection{Won't have}
+ELK voldoet aan de 'Won't haves' door het simpel te houden en de mogelijkheid te hebben om zonder te veel werk zaken aan te passen of toe te voegen.
+
+In conclusie voldoet de dashboard aan de verwachtingen van MFPOSS om logs te kunnen analyseren. Maar een groot minpunt is hier dat deviatie detectie geen optie was een belangrijk punt was voor hun. Het is nog steeds makkelijker om afwijkingen te zien op Kibana dan manueel in de logs. Er moet nog aan de integratie gesleuteld worden maar aangezien er twee teams op aan het werken zijn is extra werkbelast maar klein. Het is het dus waard voor MFPOSS om de logs over te zetten en een dashboard te maken. Dat geldt ook voor de mainframe teams dat aan het denken zijn om ELK te gebruiken in de toekomst. Het advies dat meegegeven wordt met MFPOSS is als volgt: Elk is de moeite waard en zeker als er een conversatie gestart wordt in verband met de deviatie detectie. Aangezien dit een groot aanwinst zou kunnen zijn. Maar de pluspunten zijn net meer als de minpunten. Als er zich nog te veel fouten blijven voordoen is dit een project dat even in hiatus zou moeten gaan tot dat er dringend vraag naar is.
+

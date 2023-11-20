@@ -1,0 +1,55 @@
+%---------- Inleiding ---------------------------------------------------------
+
+\section{Introductie}%
+\label{sec:introductie}
+
+In hun kern zijn mainframes eigenlijk computers met een grote hoeveelheid geheugen en data processoren. Daarmee kan het een kolossaal hoeveelheid aan bewerkingen uitvoeren en gegevens verwerken. Dit doet het mainframe op een zeer betrouwbare, veilige en schaalbare manier. Voor het mainframe zijn deze 3 concepten erg van belang en blinkt het er ook meteen in uit. Een bedrijf zou van hun mainframe minstens 99.999 of '\textit{5 nines}' beschikbaarheid mogen verwachten dat betekent dat per jaar een mainframe niet meer als 5.26 minuten onverwacht niet beschikbaar is. Het is zelfs niet ongehoord dat een mainframe jaren aan een stuk draait zonder één moment waar het onverwachts onbeschikbaar is. Dit is tot op het punt gekomen waar dat voor IBM's zSystems de z voor "zero downtime" staat. Het is dus niet moeilijk om te concluderen dat betrouwbaarheid zeer hoog staat voor mainframes. Er zijn natuurlijk nog meer redenen waarom het mainframe een belangrijk platform is. Maar het is vooral door het uitblinken in deze 3 concepten dat het een cruciaal deel van onze samenleving is geworden. Banken, Overheden, Vliegtuigmaatschappijen en nog veel meer steunen op deze concepten om alles vlot en veilig te laten verlopen en dit met zo min mogelijk momenten van onbeschikbaarheden te hebben. Het is dus belangrijk om deze concepten te her-evalueren en verbeteren waar mogelijk zodat het platform alsmaar blijft evolueren met de tijden. Colruyt Group ziet op dit moment wel een plaats waar er mogelijks verbetering in kan. Om ervoor te zorgen dat hun systeem blijft draaien op een optimale wijzen hebben ze systeem logs. Het probleem daarbij is dat die logs miljoenen rijen lang kunnen zijn en voor een mens is het quasi onmogelijk om met zekerheid te bevestigen of dat er geen afwijking is gebeurd van het normaal verloop. Hier komen log analyzers zoals ELK en DataDog bij kijken. Log analyzers worden nu volop gebruikt door traditionele platformen om logs te analyseren en te visualiseren met grafieken van hoge kwaliteit. Er kunnen veel positieve zaken over gehoord worden maar kunnen dezelfde praktijken en tools gebruikt worden voor de mainframe logs?
+
+
+%---------- Stand van zaken ---------------------------------------------------
+
+\section{State-of-the-art}%
+\label{sec:state-of-the-art}
+
+\subsection{Mainframe?}
+Een mainframe is zoals eerder besproken een computer die gemaakt is om vlot en veilig transacties te kunnen uitvoeren. Er is hier een nadruk op veiligheid en betrouwbaarheid. Logs maken daar een groot deel van. Zonder logs kan men niet weten of het systeem goed aan het draaien is of niet en daarom is er een extensieve log systeem voorzien. Het probleem is dat men die aanzienlijk groot is. Men spreekt hier van miljoenen rijen en zelfs een ervaren werknemer zou hier makkelijk zaken kunnen missen. Dit is dus het probleem waar Colruyt Group vandaag een antwoord op zoekt. ~\autocite{IBM2023(1),IBM2023(2),IBMArchives}
+
+\subsubsection{z/16}
+z16 een mainframe gemaakt door IBM. Deze mainframe is in 2023 het meest recente beschikbare mainframe. Deze mainframe wordt gehanteerd in Colruyt en gaat op kleine mate beschikbaar worden gesteld voor dit onderzoek. \newline ~\autocite{Laura2023} 
+
+\subsection{Log analysers}
+In dit hoofdstuk gaan een paar van de meest bekende analyzers kort besproken worden. Dit zijn dan ook de analyzers dat onderzocht gaan worden. De keuzes werden gemaakt op basis van beschikbaarheid, aanbevelingen en poteniele meerwaarde aan Colruyt Group. Enige verdere studies dat andere log analyzers zouden gebruiken zouden hun werk kunnen baseren en vergelijken met deze analyzers. Aangezien in de wereld van software alles snel beweegt zou er wel moeten uitgekeken worden naar mogelijke nieuwe updates. Bij elke besproken log analyzer gaat er een versienummer vermeld worden. 
+
+\subsubsection{ELK of Elastic stack}
+Versie: 8.10.3 \newline
+ELK is een groep van voormalige open-source softwareapplicaties dat samenwerken om de ELK-stack te vormen. Er zijn drie hoofdapplicaties dat een ELK-stack maken en die zijn Elasticsearch, Logstash en Kibana. Daarbij komen soms andere applicaties zoals Beats ook bij kijken. Gemaakt en beheerd door Elastic, ELK dient om logs te analyseren en te visualiseren. Zo kunnen teams niet alleen hun logs overzichtelijk bekijken maar ook grafieken maken en vergelijken met vorige logs. ~\autocite{Elatic(1),DotanHorovits}
+
+\begin{itemize}
+    \item Elasticsearch is een prominente \newline NoSQL database gebouwd op de krachtige Lucene zoekmachine, bekend om zijn \newline robuuste mogelijkheden op het gebied van gegevensopslag en -opvraging. ELk is een zoekserver is geschreven in Java en het blinkt uit in het indexeren van heterogene gegevenstypen.~\autocite{GedalBer}
+    \item Logstash is een gegevensverwerkingstool die oorspronkelijk is ontworpen voor log-analyse, maar zich heeft ontwikkeld tot een veelzijdige gegevensverwerkingstool. Het werkt als een pijpleiding in 3 fases: invoer, filter en uitvoer. ~\autocite{Jamie2017,JugensToit}
+    \item Kibana zorgt voor de visualisatie van de data. Dit aan de hand van een dashboard met grafieken, kaarten, cijfers of tekst.~\autocite{DavidTaylor2}
+    \item Beats is een applicatie dat vaak ook wordt gebruikt in een elastic stack doordat het de logs naar ELK krijgen vereenvoudigd. \newline ~\autocite{objectrocket}
+\end{itemize}
+
+\subsubsection{Grafana Loki}
+Versie: v2.9.x \newline
+Grafana is een open source data\newline -visualisatieplatform. Het is gemaakt en onderhouden door Grafana Labs. Met Grafana kunnen gebruikers hun gegevens bekijken via grafieken en diagrammen die zijn samengevoegd in een dashboard. Dit is gelijkaardig aan de meeste log analyzers. Dit komt omdat dashboarden zorgen voor een makkelijkere interpretatie en begrip van de data. Op grafana kunt ook waarschuwingen instellen voor uw informatie en metingen. Dit zorgt ervoor dat u sneller kan inspringen bij geval van problemen. Grafana is gebouwd op open principes en het geloof dat gegevens toegankelijk moeten zijn voor de hele organisatie en niet alleen voor een kleine groep mensen. \autocite{RedHat2022,Grigor2023}
+
+\subsubsection{DataDog}
+Versie: 7 \newline
+Datadog is de derde monitoring- en analysetool dat we bespreken. Het kan prestatiegegevens en gebeurtenisbewaking bieden voor infrastructuur en Cloud services. Waaronder servers en databases. Het is beschikbaar voor implementatie op locatie of als een SaaS-oplossing en ondersteunt diverse besturingssystemen en Cloud serviceproviders. Datadog gebruikt een Go-agent en heeft integraties met verschillende diensten en tools. Het biedt aanpasbare dashboards en meldingen voor prestatieproblemen via verschillende communicatie platformen. \autocite{DataDog2021}
+
+\subsection{Linux}
+Linux is een gratis open source besturingssysteem. Dit betekent dat iedereen dat interesse heeft Linux kan bestuderen en zelf aanpassen naar eigen mate en zelf distribueren naar anderen. Door deze vrijheid en andere voordelen is Linux één van 's werelds grootse besturingssystemen geworden. Waarom Linux een rol speelt in dit onderzoekt wordt verder besproken in hoofdstuk 3 "Methodologie". \autocite{RedHat2023}
+%---------- Methodologie ------------------------------------------------------
+\section{Methodologie}%
+\label{sec:methodologie}
+Aangezien er in dit onderzoek een vergelijking gaat gemaakt worden uit drie verschillende applicaties is het verstandig om ook criteria op te stellen. Die criteria gaan overlegd worden met Colruyt Group IT en enig mogelijkse toekomstige onderzoeken zullen deze criteria eerst moeten revalueren en aanpassen naar eigen voorkeur. De criteria kunnen in een MoSCoW-formaat gemaakt en gebruikt worden. Vervolgens gaan er prototypes moeten opgesteld worden van elke analyzer. Eén prototype per applicatie is voldoende, al zouden meerdere natuurlijk ideaal zijn. Colruyt Group zal een test Linux server aanbieden waarop de analyzers mogen geïnstalleerd worden. De Linux server loopt op het mainframe maar er wordt niet gepland om de analyzers rechtstreeks op de mainframe te zetten. Dit omdat er een grote zekerheid is dat het te moeilijk zou zijn. Terwijl dat op een Linux server beter gedocumenteerd en ondersteund is langs beide kanten. Eens de prototypes klaar zijn worden ze gemeten aan de hand van de criteria en kan er een gedetailleerde aanrading met prototype overgemaakt worden aan Colruyt Group IT.
+
+
+%---------- Verwachte resultaten ----------------------------------------------
+\section{Verwacht resultaat, conclusie}%
+\label{sec:verwachte_resultaten}
+Het optimale resultaat van dit onderzoek zouden meerdere werkende prototypes zijn met één uitblinker dat kan aangeraden worden aan Colruyt Group It. Natuurlijk is er een mogelijkheid dat er een analyzer niet compatibel is met de omgeving dat we opzetten maar in het slechtste geval zou minstens één analyzer moeten werken en een vervanging gezocht moeten worden om toch een vergelijking te kunnen doen met twee werkende prototypes.
+
+
