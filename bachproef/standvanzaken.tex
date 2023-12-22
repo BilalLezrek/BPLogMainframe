@@ -5,7 +5,7 @@
 In het centerpunt van dit onderzoek staat de mainframe. Tegenwoordig weten mensen niet wat een mainframe is. Als ze dat wel weten is het meestal een verouderde versie of hebben ze zelfs een verkeerd beeld. Daarom is het van belang dat we dit onderzoek starten met het achterhalen wat een mainframe nu eigenlijk is en waarom ze nog van groot belang zijn.
 
 \section{Mainframes}
-In hun kern zijn mainframes krachtige computers die een cruciale rol spelen bij het verwerken van grote hoeveelheden gegevens en complexe transacties in sectoren zoals banken, verzekeringsmaatschappijen en overheden. Bedrijven of organisaties dat een mainframe gebruiken steunen op de uitzonderlijke hoge standaarden in betrouwbaarheid, snelheid/throughput, beveiliging en flexibiliteit dat mainframes aanbieden~\autocite{IBM2023(1),IBM2023(2)}. IBM definieert het woord mainframe als 'een grote computer, met name één waaraan andere computers kunnen worden aangesloten zodat ze faciliteiten kunnen delen die de mainframe biedt. De term verwijst meestal alleen naar hardware, namelijk hoofdgeheugen, uitvoeringscircuits en randapparatuur.'~\autocite{IBMArchives}
+In hun kern zijn mainframes krachtige computers die een cruciale rol spelen bij het verwerken van grote hoeveelheden gegevens en complexe transacties in sectoren zoals banken, verzekeringsmaatschappijen en overheden. Bedrijven of organisaties dat een mainframe gebruiken steunen op de uitzonderlijke hoge standaarden in betrouwbaarheid, snelheid/throughput, beveiliging en flexibiliteit dat mainframes aanbieden~\autocite{IBM2023(1),IBM2023(2)}. IBM definieert het woord mainframe als 'een grote computer, met name één waaraan andere computers kunnen worden aangesloten zodat ze faciliteiten kunnen delen die de mainframe biedt. De term verwijst meestal alleen naar hardware, namelijk geheugen, uitvoeringscircuits en randapparatuur.'~\autocite{IBMArchives}
 
 Enkele funtionaliteiten van een (IBM) mainframe zijn:
 
@@ -50,7 +50,7 @@ De IBM z16 is een recente toevoeging aan deze traditie van betrouwbaarheid, met 
  Wat hier nog niet besproken is geweest zijn de mainframe werknemers die er voor zorgen dat problemen opgelost of voorkomen worden. Dat is uiteraard ook een essentieël onderdeel om de mainframe standarden in betrouwbaarheid hoog te houden. Een dat de mainframe ervoor zorgt dat die werknemers hun job kunnen doen is door extensieve logs mee te geven. De log waar in dit onderzoek jet over gaat is de "SYSLOG". Systeemlogs op een mainframe zijn gegevens die worden gemaakt door het besturingsysteem en een sommige softwarecomponenten om informatie meetegeven over hun werking en enige problemen dat ze ondervinden. Ze zijn essentieel voor oplossen van problemen, onderhouden en monitoren van het systeem. Bij Colruyt Group lopen deze logs starten om zes uur 's ochtends en lopen 24 uur. Tijdens deze periode worden de logs geschreven naar een active logs om dan na 24u te worden opgeslaan en geachriveerd.
  
 \subsection{JCL}
-JCL,Job Control Language voluit, is een essentieel onderdeel van de mainframe en dient als communicatiemiddel tussen programma's zoals COBOL en PL/I en het besturingssysteem. Het speelt een belangrijke rol bij het uitvoeren van batch- of online verwerking. Bij batchverwerking kunnen taken bijvoorbeeld bestaan uit het verwerken van grote hoeveelheden banktransacties. Bij online verwerking daarentegen vinden real-time interacties plaats, zoals bankmedewerkers die een back-officescherm gebruiken om rekeningen te openen.Het is een soort programeertaal dat de mainframe zegt welke stappen die moet zetten om de job succesvol ui te voeren.~\autocite{tutpoint} Hier zijn stappen voor verwerken van taken met behulp van JCL:
+JCL,Job Control Language voluit, is een essentieel onderdeel van de mainframe en dient als communicatiemiddel tussen programma's zoals COBOL en PL/I en het besturingssysteem. Het speelt een belangrijke rol bij het uitvoeren van batch- of online verwerking. Bij batchverwerking kunnen taken bijvoorbeeld bestaan uit het verwerken van grote hoeveelheden banktransacties. Bij online verwerking daarentegen vinden real-time interacties plaats, zoals bankmedewerkers die een back-officescherm gebruiken om rekeningen te openen.Het is een soort programeertaal dat de mainframe zegt welke stappen die moet zetten om de job succesvol uit te voeren.~\autocite{tutpoint} Hier zijn stappen voor verwerken van taken met behulp van JCL:
 
 \subsubsection{Taakinvoer}
 Gebruikers dienen JCL in bij het Job Entry System (JES) van het besturingssysteem. Dit is waar alle jobs binnenkomen en voorbereid worden om uit te voeren.
@@ -67,11 +67,11 @@ Wanneer een taak de hoogste prioriteit bereikt, wordt deze uit de wachtrij gehaa
 \subsubsection{opkuisen}
 Na dat alles klaar is worden de toegewezen middelen vrijgegeven. De joblog wordt uit de SPOOL verwijderd dus als men die wilt oplsaan moet die naar een dataset weggeschreven worden.
 
-\subsection{Service now}
-ServiceNow is een cloudgebaseerd IT Service Management platform dat processen automatiseert. Service Now voldoet aan ITIL-richtlijnen voor servicegerichte operaties. Het maakt gebruik van machine learning voor efficiëntie en schaalbaarheid. Belangrijke functies omvatten onder andere  kosteneffectieve ondersteuning, aanpasbaarheid en gegevensbeveiliging. Binnen Colruyt Group en voor dit onderzoek wordt Service now voornamlijk gebruikt om ticketten aan te make om problemen op te lossen of producten te leveren. ~\autocite{DavidTaylor}
+\subsection{Conclusie}
+Uit het onderzoek in dit hoofdstuk kunnen we vaststellen dat een mainframe vandaag de dag nogsteeds een belangrijk onderdeel is van onze samenleving. Een belanrijk deel daarvan zijn de uitbundige logs dat nog niet optimaal gehanteerd worden. Dit versterkt het nood aan dit onderzoek dat gaat trachten bedrijven te helpen met het vinden van een gepaste log analyzer aan hun noden, maar specifieker ook mainframes gaan proberen helpen optimaliseren. Dit aan de hand van analysers dat in volgende hoofdstukken gaan besproken worden. 
 
 \section{ELK}
-ELK is een groep van voormalige open-source software applicaties dat samenwerken om de ELK-stack te vormen. Er zijn drie hoofdapplicaties dat een ELK-stack maken en die zijn Elasticsearch, Logstash en Kibana. Daarbij komen soms andere applicaties zoals Beats ook bij kijken. Gemaakt en beheerd door Elastic, ELK dient om logs te analyseren en te visualiseren. Zo kunnen teams niet alleen hun logs overzichtelijk bekijken maar ook grafieken maken en vergelijken met vorige logs ofdat er iets verschilt. In dit hoofdstuk gaat er gekeken worden naar alle ELK componenten die van toepassing gaan komen tijdens dit onderzoek. Figuur 2.5 ~\autocite{DavidTaylor} geeft al een klein overzicht van hoe ELK werkt.~\autocite{DavidTaylor,DotanHorovits}
+ELK is een groep van voormalige open-source software applicaties dat samenwerken om de ELK-stack te vormen. Er zijn drie hoofdapplicaties dat een ELK-stack maken en die zijn Elasticsearch, Logstash en Kibana. Daarbij komen soms andere applicaties zoals Beats ook bij kijken. Gemaakt en beheerd door Elastic, ELK dient om logs op te slaan, te analyseren en te visualiseren. Zo kunnen teams niet alleen hun logs overzichtelijk bekijken maar ook grafieken maken en vergelijken met vorige logs. Zo springen de verschillen of problemen beter in het oog. In dit hoofdstuk gaat er gekeken worden naar alle ELK componenten die van toepassing gaan komen tijdens dit onderzoek. Figuur 2.5 ~\autocite{DavidTaylor} geeft al een klein overzicht van hoe ELK werkt.~\autocite{DavidTaylor,DotanHorovits}
 
 
 \begin{figure}[h]
@@ -85,7 +85,7 @@ ELK is een groep van voormalige open-source software applicaties dat samenwerken
 Elasticsearch is een prominente NoSQL-database gebouwd op de krachtige Lucene-zoekmachine, bekend om zijn robuuste mogelijkheden op het gebied van gegevensopslag en -opvraging. ELk is een zoekserver is geschreven in Java en het blinkt uit in het indexeren van heterogene gegevenstypen. Elasticsearch werkt binnen een cluster, dat een verzameling nodes vertegenwoordigt die gegevens vasthouden en indexerings- en zoekmogelijkheden bieden. Nodes vertegenwoordigen individuele Elasticsearch-instanties. Gegevens zijn georganiseerd in indexen, die elk vergelijkbare documenten bevatten. Documenten worden geïndexeerd en geassocieerd met een unieke ID. Indexen kunnen worden verdeeld in shards voor distributie, en de schaalbaarheid van Elasticsearch kan worden bereikt door meer nodes aan het cluster toe te voegen. Het biedt een REST API-webinterface met JSON-uitvoer, wat integratie in verschillende toepassingen vergemakkelijkt. Elasticsearch biedt ondersteuning voor meerdere talen aan naast functies zoals volledige tekstzoekopdracht, bijna-realtime (NRT) zoekopdracht, sharding, replicatie.Een van de belangrijke voordelen is het vermogen om gegevens zonder een schema te verwerken, waardoor gebruikers gegevens record voor record kunnen manipuleren met multi-document API's. Daarnaast staat Elasticsearch bekend om zijn schaalbaarheid, zowel verticaal als horizontaal. Het ondersteunt verschillende programmeertalen dankzij de beschikbaarheid van pogammeertalen. ~\autocite{GedalBer}  
 
 \subsection{Logstash}
-Logstash is een gegevensverwerkingstool die oorspronkelijk is ontworpen voor log-analyse, maar zich heeft ontwikkeld tot een veelzijdige gegevensverwerkingstool. Het werkt als een pijplijn in 3 fases: invoer, filter en uitvoer.~\autocite{Jamie2017,JugensToit}  
+Logstash is een gegevensverwerkingstool die oorspronkelijk is ontworpen voor log-analyse, maar zich heeft ontwikkeld tot een veelzijdige gegevensverwerker. Het werkt als een pijplijn in 3 fases: invoer, filter en uitvoer.~\autocite{Jamie2017,JugensToit}  
 
 \subsubsection{invoerstadium}
 In het invoerstadium verzamelt Logstash gegevens uit verschillende bronnen, waaronder logbestanden, netwerkprotocollen en wachtrijen. Het kan inkomende gebeurtenissen taggen met metagegevens die verband houden met hun bron.
@@ -161,6 +161,7 @@ Heartbeat kan systemen pingen om te zien of ze nog operationeel zijn. Deze info 
     \label{fig:Een ELK-stack met beats}
 \end{figure}
 
+
 \subsection{Anomaly detection}
 Ook staan we even stil bij deviatie detectie functies dat Elastic aanbiedt. Dat is een live hulpmiddel binnen de Elastic Stack dat bedoeld is om afwijkingen in tijdreeksgegevens te identificeren. Het leert autonoom de normale patronen en trends in de gegevens, vermindert valse alarmen en vereenvoudigt de analyse van de onderliggende oorzaken. Deze functie zou erg van pas komen voor MFPOSS. Belangrijke onderdelen zijn:
 \begin{itemize}
@@ -175,14 +176,31 @@ Ook staan we even stil bij deviatie detectie functies dat Elastic aanbiedt. Dat 
 Al deze onderdelen helpen bij het volgen van afwijkingen en het verbeteren van de operationele werkingen.
 *Automatische annotaties worden toegevoegd voor situaties zoals ontbrekende gegevens. ~\autocite{Elatic(2)} 
 
-\section{DataDog}
+\subsubsection{Conclusie}
+Zoals nu geweten bestaat de elastic stack uit drie of meer softwares die samenwerken om logs te analyseren. Dit kan opzich betekenen dat tegenover andere analysers ELK een nadeel heeft in gemak van integreren in een structuur. Maar dit kan ook betekenen dat elastic potentieel meer opties heeft wanneer het aankomt op het opzetten en structuur van de stack. De stack moet opzich niet bestaan uit de drie of meer applicaties die besproken zijn geweest. Er zijn mogelijkheden om Elasticsearch te combineren met alleen Grafana en Beats. Maar aangezien dat Elasticsearch,Logstash, Kibana en Beats gemaakt zijn om met elkaar te werken gaat de basis structuur meestal het beste zijn als men Elastic wilt kiezen. Beats kan in verschillende situaties ervoor zorgen dat het innemen van data in een elastic stack vlot verloopt. Dit valt natuurlijk wel niet in elke situatie voor en er moet rekening gehouden worden met verschillende aspecten wanneer men aan het overwegen is om Beats toe te voegen aan de stack. Deze aspecten zijn onder andere prijs, gemak van installatie, gemak van gebruik en kan één van de bestaande beats gebruikt worden voor de logs die men wilt analyseren. In situaties waar men vertrekt uit traditionele platformen gaan deze aspecten meestal geen probleem zijn. Maar in de situatie van dit onderzoek waar er een log van een mainframe verzonden wordt is er niet veel steun aangeboden. Vanuit deze situatie gaat er dus moeten gekeken worden of dat Beats mogelijk zijn om te installeren op een mainframe of het mogelijk is om de restricties dat een mainframe draagt te omzeilen. Dit wordt verder besproken in het hoofdstuk over Linux.
 
-\section{Grafana}
+\section{DataDog}
+Datadog is een cloudgebaseerd monitoring- en analytisch platform dat organisaties inzicht biedt in hun IT-infrastructuur en applicaties. Het stelt bedrijven in staat om de prestaties van systemen, applicaties en services te monitoren, gegevens te verzamelen en te analyseren, en inzichten te verkrijgen in de gezondheid en efficiëntie van hun digitale infrastructuur.
+
+Belangrijke functies van Datadog zijn onder andere monitoring in realtime, het instellen van aangepaste waarschuwingen, logbeheer, Application Performance Monitoring (APM), monitoring van Infrastructure as Code (IaC), samenwerkingstools en dashboards, en het gebruik van machine learning voor anomaliedetectie.
+
+\section{Grafana Loki}
+Grafana Labs biedt gratis open source softwares aan om logs te analyseren
+
+\subsection{Grafana}
+
+\subsection{Loki}
+Loki is de log aggregation tool dat is geinspireerd door een andere software genaamd prometheus wat ook een populaire optie is 
+
+\subsection{Prometheus}
+Prometheus is zoals eerder besrpoken een log aggregation tool dat vandaag de dag vaak gebruikt loopt met Grafana. Het wordt gebruikt om metrics te analyseren. Prometheus gaat in deze instatie 
 
 \section{Linux}
+In dit hoofdstuk gaat Linux kort besproken worden. Dit doordat het gebruikt gaat worden als hoofdplatform voor onze log analysers en opslagplaats voor onze logs. Dit betekent niet dat een bedrijf dat één van de log analysers wilt implementeren, op het manier dat in dit onderzoek wordt gedaan, zich moet aanpassen aan Linux. Het is de bedoeling dat werknemers de loganalysers langs windows benaderen. Dit helpt werknemers op de loganalysers makkelijker te leren begrijpen. Als er mogelijks een nieuwe besturingssysteem bij komt voor hun kan dit nog extra moeilijkheden meedragen dat makkelijk konden vermeden worden bij het opzetten van de analyser. Op deze methode is het mogelijk voor één persoon, dat de de gepaste informatie heeft verworven langs onder andere dit onderzoek de log analyser op te zetten,gebruiken,beheren,documenteren en aan te passen. Terwijl dat, als het nodig is, alle andere collega's de visualisatie tools kunnen benaderen op een platform waar ze mee overweg kunnen. Dit is natuurlijk geen aanrading dat alle verantwoordelijkheden aan één persoon wordt overgedragen.
 
 \subsection{Linux Server}
 
 \subsection{RedHat}
 
 \subsection{FTP}
+FTP of File Transfer Protocol is een zeer bekende protocol dat er in staat doet stellen om bestanden van een systeem naar een andere te sturen
